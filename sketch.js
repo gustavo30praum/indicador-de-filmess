@@ -25,29 +25,56 @@ function draw() {
 }
 
 function geraRecomendacao(idade, gostaDeFantasia, gostaDeAventura) {
-  if (idade >= 10) {
-    if (idade >= 14) {
-      return "O menino que descobriu o vento";
+  if (gostaDeFantasia && !gostaDeAventura ){
+    
+  if (idade < 13) {
+        return "Recomendamos assistir 'As Crônicas de Nárnia'.";
+    } else if (idade >= 13 && idade < 18) {
+        return "Recomendamos assistir 'Coraline e o Mundo Secreto'.";
+    } else if (idade >= 18 && idade < 25) {
+        return "Recomendamos assistir 'A Forma da Água'.";
     } else {
-      if (idade >= 12) {
-        if(gostaDeFantasia || gostaDeAventura) {
-          return "Homem aranha: no aranhaverso";          
-        } else{
-         return "Ladrões de bicicleta";
-        }
-      } else {
-        if (gostaDeFantasia) {
-          return "As aventuras de pi";
-        } else {
-          return "Depois da chuva";
-        }
-      }
-    }
-  } else {
-    if (gostaDeFantasia) {
-      return "A viagem de chihiro";
+        return "Recomendamos assistir 'Mágico e Poderoso'.";
+    } }
+    
+     else if (gostaDeAventura && !gostaDeFantasia) {
+       
+       if (idade < 13) {
+        return "Recomendamos assistir 'Moana - Um Mar de Aventuras'.";
+    } else if (idade >= 13 && idade < 18) {
+        return "Recomendamos assistir 'Harry Potter'.";
+    } else if (idade >= 18 && idade < 25) {
+        return "Recomendamos assistir 'Interestelar'.";
     } else {
-      return "O feitiço do tempo";
+        return "Recomendamos assistir 'Na Natureza Selvagem'.";
+    } }
+  
+  else if (gostaDeAventura && gostaDeFantasia) {
+       
+       if (idade < 13) {
+        return "Recomendamos assistir 'O Castelo Animado'.";
+    } else if (idade >= 13 && idade < 18) {
+        return "Recomendamos assistir 'A História Sem Fim'.";
+    } else if (idade >= 18 && idade < 25) {
+        return "Recomendamos assistir 'Labirinto - A Magia do Tempo'.";
+    } else {
+        return "Recomendamos assistir 'O Hobbit: A Batalha dos Cinco Exércitos'.";
+    } }
+  
+  else  {
+       
+       if (idade < 13) {
+        return "Recomendamos assistir 'Ponyo'.";
+    } else if (idade >= 13 && idade < 18) {
+        return "Recomendamos assistir 'O Ladrão de Raios'.";
+    } else if (idade >= 18 && idade < 25) {
+        return "Recomendamos assistir 'O Amante de Lady Chatterley'.";
+    } else {
+        return "Recomendamos assistir 'Uma Lição de Vida'.";
+    } }
+   
     }
-  }
-}
+
+
+
+
